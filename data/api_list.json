@@ -1,7 +1,7 @@
 [
   {"title":"API 1", "selected":false, "link": "api-1"},
   {"title":"API 2", "selected":false, "link": "api-2"},
-  {"title":"My API 3", "selected":false, "link": "api-3"},
+  {"title":"API 3", "selected":false, "link": "api-3"},
   {"title":"API 4", "selected":false, "link": "api-4"},
   {"title":"API 5", "selected":false, "link": "api-5"}
 ]
