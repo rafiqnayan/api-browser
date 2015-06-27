@@ -1,10 +1,17 @@
-<h1 class="page-header">{{data.name}}</h1>
-<div class="row placeholders text-left">
+<div class="row">
+    <h1 class="page-header">{{data.name}}</h1>
 	<p class="text-left">{{data.description}}</p>
     <h3>Resource URL</h3>
     <code>{{data.url}}</code>
     <h3>Parameters</h3>
     <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Required?</th>
+                <th>Description</th>
+            </tr>
+        </thead>
         <tbody>
             <tr ng-repeat="param in data.parameters">
                 <td>{{param.name}}</td>
@@ -14,10 +21,9 @@
         </tbody>
     </table>
 
-    <h3>Example</h3>
-    <span>URL: <code>{{data.example.url}}</code></span>
-    <p class="text-left">
-        Response: 
-        {{data.example.response}}
-    </p>
+    <h3>Example Request</h3>
+    <code>{{data.example.url}}</code>
+    <h3>Example Response</h3>
+    <pre>{{data.example.response}}</pre>
+    
 </div>
