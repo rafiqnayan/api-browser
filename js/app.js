@@ -3,7 +3,7 @@ var apiBrowserApp = angular.module('app', ['ngRoute','apiBrowserControllers', 'a
 apiBrowserApp.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
-      when('/api/:apiId', {
+      when('/api/:apilink', {
         templateUrl: 'api_details.html',
         controller: 'ApiDetailController'
       }).

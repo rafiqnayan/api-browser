@@ -1,4 +1,23 @@
-<h1 class="page-header">{{apiId}} Details</h1>
-<div class="row placeholders">
-	TBD: detail view for <span>{{apiId}}</span>
+<h1 class="page-header">{{data.name}}</h1>
+<div class="row placeholders text-left">
+	<p class="text-left">{{data.description}}</p>
+    <h3>Resource URL</h3>
+    <code>{{data.url}}</code>
+    <h3>Parameters</h3>
+    <table class="table">
+        <tbody>
+            <tr ng-repeat="param in data.parameters">
+                <td>{{param.name}}</td>
+                <td>{{param.required}}</td>
+                <td>{{param.description}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Example</h3>
+    <span>URL: <code>{{data.example.url}}</code></span>
+    <p class="text-left">
+        Response: 
+        {{data.example.response}}
+    </p>
 </div>
