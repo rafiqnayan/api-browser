@@ -1,10 +1,10 @@
 <div class="row">
-    <h1 class="page-header">{{data.name}}</h1>
-	<p class="text-left">{{data.description}}</p>
-    <h3>Resource URL</h3>
-    <code>{{data.url}}</code>
-    <h3>Parameters</h3>
-    <table class="table">
+    <h1 class="page-header">{{data.request.type}} {{data.name}}</h1>
+    <p class="text-left">{{data.description}}</p>
+    <h4>Resource URL</h4>
+    <code>{{data.request.type}}</code> <code>{{data.url}}</code>
+    <h4>Parameters</h4>
+    <table class="table table-stripped">
         <thead>
             <tr>
                 <th>Name</th>
@@ -13,17 +13,19 @@
             </tr>
         </thead>
         <tbody>
-            <tr ng-repeat="param in data.parameters">
+            <tr ng-repeat="param in data.request.parameters">
                 <td>{{param.name}}</td>
                 <td>{{param.required}}</td>
                 <td>{{param.description}}</td>
             </tr>
         </tbody>
     </table>
-
-    <h3>Example Request</h3>
-    <code>{{data.example.url}}</code>
-    <h3>Example Response</h3>
-    <pre>{{data.example.response}}</pre>
     
+    <h4>Example Request</h4>
+    <code>{{data.request.type}}</code> <code>{{data.example.url}}</code>
+    <pre pretty-json="data.example.request"></pre>
+    
+    <h4>Example Response</h4>
+    <pre pretty-json="data.example.response"></pre>
+
 </div>

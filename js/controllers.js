@@ -1,12 +1,11 @@
 var apiBrowserControllers = angular.module('apiBrowserControllers', []);
 
-apiBrowserControllers.controller('ApiDetailController', ['$scope', '$routeParams','$http',
-  function($scope, $routeParams, $http) {
-    
-    $http.get('/data/details/sample_api.json').success(function(data){
-        $scope.data = data;
+apiBrowserControllers.controller('ApiDetailController', ['$scope', '$routeParams', '$http',
+	function($scope, $routeParams, $http) {
 
-        $scope.data.example.response = JSON.stringify(data.example.response, undefined, 2);
-    });
+		$http.get('/data/details/sample_api.json').success(function(data) {
+			$scope.data = data;
+		});
 
-  }]);
+	}
+]);
